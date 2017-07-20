@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record model="ir.ui.view" id = "property_customer_form_view">
+            <field name="name">Property Customer</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="company_type" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="name" position="replace">
+                    <br/>
+                    <field name="name" required="1" placeholder="Nombre....."/>
+                </field>
+
+                <xpath expr="/form/sheet/group/group/label[@for='street']" position="before">
+                    <field name="apod_legal"/>
+                    <field name="ci"/>
+                    <field name="ci_exp"/>
+                    <field name="est_civil"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

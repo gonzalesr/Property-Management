@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+            <record model="ir.ui.view" id = "property_lote_form_view">
+            <field name="name">Terrenos</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="replace">
+                    <field name="name" placeholder="Nombre del Terreno" nolabel="1"/>
+                </field>
+                <field name="sale_ok" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="purchase_ok" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+
+                 <label class="oe_edit_only" for="name" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                 </label>
+                 <label for="sale_ok" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                 </label>
+                <label for="purchase_ok" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                 </label>
+                <field name="type" position="before">
+                    <separator string="Datos del Inmueble " colspan="2"/>
+                    <field name="urbanization"/>
+                    <field name="block" />
+                    <field name="category" />
+                    <field name="sup_lote" />
+                    <field name="sup_const" />
+                    <field name="tip_const" />
+                    <field name="mat_real" />
+                 </field>
+
+                 <field name="type" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                 </field>
+
+                 <field name="categ_id" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                 </field>
+                 <field name="lst_price" position="before">
+                     <separator string="Precio" colspan="2"/>
+                     <field name="precio_m" />
+                     <field name="precio_sup_const" />
+                 </field>
+
+                <xpath expr="//div[@name='standard_price_uom']" position="after">
+                    <separator string="Estado" colspan="2"/>
+                    <field name="estatus" />
+                </xpath>
+
+
+            </field>
+        </record>
+
+         <record model="ir.ui.view" id="property_lote_tree">
+            <field name="name">Terrenos tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+
+                <field name="attribute_value_ids" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+            </field>
+         </record>
+        <record model="ir.actions.act_window" id="property_lote_action">
+            <field name="name">Terrenos</field>
+            <field name="res_model">product.product</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <menuitem action="property_lote_action" id="property_lote_menu_id" name="Terrenos" parent="project.menu_project_config" sequence="1" groups="project.group_project_manager"/>
+
+
+    </data>
+</odoo>

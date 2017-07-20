@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <record model="ir.ui.view" id = "property_project_form_view">
+            <field name="name">Property Project</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="before">
+                    <field name="module"/>
+                    <field name="note"/>
+                </field>
+            </field>
+         </record>
+
+        <record model="ir.ui.menu" id="project.menu_main_pm">
+            <field name="name">Urbanizaci</field>
+        </record>
+
+    </data>
+</odoo>

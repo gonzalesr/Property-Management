@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C), 2017, Odoo - Team de Localización Boliviana.
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<openerp>
+    <data noupdate="True">
+
+        <record model="res.country.state" id="BE">
+            <field name="name">Beni</field>
+            <field name="code">BE</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+        <record model="res.country.state" id="CH">
+            <field name="name">Chuquisaca</field>
+            <field name="code">CH</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+        <record model="res.country.state" id="CBA">
+            <field name="name">Cochabamba</field>
+            <field name="code">CBA</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+        <record model="res.country.state" id="LP">
+            <field name="name">La Paz</field>
+            <field name="code">LP</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+         <record model="res.country.state" id="OR">
+            <field name="name">Oruro</field>
+            <field name="code">OR</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+         <record model="res.country.state" id="PA">
+            <field name="name">Pando</field>
+            <field name="code">PA</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+        <record model="res.country.state" id="PT">
+            <field name="name">Potosí</field>
+            <field name="code">PT</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+         <record model="res.country.state" id="SC">
+            <field name="name">Santa Cruz de la Sierra</field>
+            <field name="code">SC</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+        <record model="res.country.state" id="TJ">
+            <field name="name">Tarija</field>
+            <field name="code">TJ</field>
+            <field name="country_id" ref="base.bo"/>
+        </record>
+
+    </data>
+</openerp>
