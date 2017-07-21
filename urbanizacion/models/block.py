@@ -9,7 +9,7 @@ class Block(models.Model):
         string = 'Nombre'
     )
     abrev = fields.Char(
-        string = "Abreviatura"
+        string = "Abreviaturas"
     )
     urbanization = fields.Many2one(
         'project.project',
