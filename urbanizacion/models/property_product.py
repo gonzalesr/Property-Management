@@ -54,3 +54,6 @@ class Property(models.Model):
         ],
         default='libre',
     )
+    observacion = fields.Text(
+        string = 'Observación'
+    )
